@@ -25,7 +25,7 @@ on dm.emp_no = e.emp_no;
 -- 4. List the department number for each employee along with 
 -- that employee’s employee number, last name, first name, 
 -- and department name.
-select distinct on(e.emp_no) e.emp_no, e.last_name, e.first_name, d.dept_name
+select distinct on(e.emp_no) d.dept_no, e.emp_no, e.last_name, e.first_name, d.dept_name
 from Employees as e
 left join Dept_Emp as de
 on e.emp_no = de.emp_no
